@@ -4,17 +4,17 @@ const router = new Router();
 router.get("/team", (req, res, next) => {
   Team.findAll()
     .then(data => res.send(data))
-    .catch(errors => next(errors));
+    .catch(error => next(error));
 });
 router.post("/team", (req, res, next) => {
   Team.create(req.body)
     .then(team => res.send(team))
-    .catch(errors => next(errors));
+    .catch(error => next(error));
 });
 router.get("/team/:id", (req, res, next) => {
   Team.findByPk(req.params.id)
     .then(data => res.send(data))
-    .catch(errors => next(errors));
+    .catch(error => next(error));
 });
 
 module.exports = router;
