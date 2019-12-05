@@ -16,4 +16,4 @@ const cityRouter = require("./city/router");
 app.use(cityRouter);
 
 const port = process.env.PORT || 4000;
-app.listen(port, console.log(`Listening on :${port}`));
+app.listen(port, () => console.log(`Listening on :${port}`));
